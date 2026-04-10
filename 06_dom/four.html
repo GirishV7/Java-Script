@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 4</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function add(langague){
+        const li = document.createElement('li');
+        li.innerHTML = `${langague}`;
+        document.querySelector('ul').appendChild(li);
+    };
+    add("python");
+    add("Java");
+
+    function addopt(langague){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langague));
+        document.querySelector('.lang').appendChild(li);
+    }
+    add("cpp");
+
+    // Edit
+    const secondli = document.querySelector('li:nth-child(2)');
+    // secondli.innerHTML = "C programing";
+    // secondli.appendChild(document.createTextNode(" C Programing"));
+    const newli = document.createElement('li');
+    newli.textContent = "C Program";
+    secondli.replaceWith(newli);
+
+    // edit
+    const firstli = document.querySelector('li:first-child');
+    firstli.outerHTML = '<li>TypeScript</li>'
+
+    // remove 
+    const thirdli = document.querySelector('li:nth-child(3)');
+    thirdli.remove();
+
+</script>
+</html>

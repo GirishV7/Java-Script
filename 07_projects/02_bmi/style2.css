@@ -1,0 +1,107 @@
+nav{
+    justify-content: center;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 10px;
+    border: 2px;
+    width: 100%;
+    height: 100px;
+    background-color:#00dbb3
+}
+
+a{
+    border: 1px solid black;
+    padding-bottom: 4px;
+    padding-top:  4px;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    background-color: #ffffff;
+    width: 350px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    border-color: #6c63ff;
+}
+
+/* Button */
+button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #574fd6;
+}
+
+/* Result Text */
+.results {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* BMI Guide Section */
+.weight-guide {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.weight-guide h3 {
+    color: #333;
+}
+
+.weight-guide p {
+    margin: 5px 0;
+    color: #444;
+}

@@ -209,3 +209,56 @@ function newgame(){
 }
 
 ```
+
+## project 5 
+```
+window.addEventListener('keydown',(e)=>{
+    document.getElementById('div1').innerHTML = `<table border="1px">
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key == " "? "Space" : e.key }</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>`
+})
+
+```
+
+## project 6
+
+```
+// Generate the random color 
+
+const randomcolor = function(){
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for(let i=0;i<6;i++){
+        color += hex[Math.floor(Math.random()*16)];
+    }
+    return color;
+};
+
+// console.log(randomcolor());
+let set
+const startb = function(){
+    const changecolor = function(){
+        document.body.style.backgroundColor = randomcolor();
+    }
+   set = setInterval(changecolor,1000);
+};
+
+const stopb = function(){
+    clearInterval(set);
+    set = null;
+};
+
+document.querySelector('#btn1').addEventListener('click',startb);
+document.querySelector('#btn2').addEventListener('click',stopb);
+
+
+```

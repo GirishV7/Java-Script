@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="btn">stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("hi girish");
+        
+    // },2000)
+
+    // const giri = function(){
+    //     console.log("hello");
+        
+    // }
+
+    const newtext = function(){
+        document.querySelector('h1').innerHTML = 'best js series' ;
+    } 
+
+    const change = setTimeout(newtext,2000);
+    // clearTimeout(change);
+
+    document.querySelector('#btn').addEventListener('click',function(e){
+        clearTimeout(change);
+        console.log("stoped");
+        
+    })
+
+</script>
+</html>

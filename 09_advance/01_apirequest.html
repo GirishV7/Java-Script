@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+<br>
+<div id="div1">
+    <h2>new element and image with name </h2>
+    <h5 id="name"></h5>
+    <img src="" alt="image" id="image">
+</div>
+</body>
+<script>
+    const requrl = 'https://randomuser.me/api/';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requrl);
+    // console.log(xhr.readyState);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            console.log(this.responseText);
+            
+            const data = JSON.parse(this.responseText);
+            // console.log( data);
+            // console.log(data.info.seed);
+
+            // console.log(data.results[0].picture.large);
+            const new_pic = data.results[0].picture.large
+            const images = document.getElementById('image');
+            const names = document.getElementById('name');
+            const new_name = data.results[0].name.title + " " + data.results[0].name.first + " " + data.results[0].name.last;
+            console.log(images);
+            images.setAttribute('src',new_pic);
+            console.log(data.results[0].name);
+
+            names.innerHTML = new_name;
+
+            
+            
+            
+        }
+    }
+    xhr.send();
+    
+</script>
+</html>

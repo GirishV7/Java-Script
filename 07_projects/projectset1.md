@@ -12,7 +12,7 @@ console.log('Hello');
 
 ## project1 solution
 
-```
+```JavaScript
 const buttons = document.querySelectorAll('.button');
 // console.log(buttons);
 const body = document.querySelector("body");
@@ -68,7 +68,7 @@ hd.addEventListener('click',function(){
 
 ## Project 2
 
-```
+```JavaScript
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(e){
@@ -98,7 +98,7 @@ form.addEventListener('submit', function(e){
 
 ## project 3
 
-```
+```JavaScript
 const clock = document.getElementById('clock');
 
 setInterval(function(){
@@ -115,7 +115,7 @@ setInterval(function(){
 
 ## project 4 
 
-```
+```JavaScript
 let randnumber = parseInt(Math.random()*100+1);
 
 const sub = document.querySelector('#subt');
@@ -211,7 +211,7 @@ function newgame(){
 ```
 
 ## project 5 
-```
+```JavaScript
 window.addEventListener('keydown',(e)=>{
     document.getElementById('div1').innerHTML = `<table border="1px">
   <tr>
@@ -231,7 +231,7 @@ window.addEventListener('keydown',(e)=>{
 
 ## project 6
 
-```
+```JavaScript
 // Generate the random color 
 
 const randomcolor = function(){
